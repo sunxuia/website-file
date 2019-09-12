@@ -1,0 +1,33 @@
+language: java
+install: true
+jdk:
+  - openjdk11
+services:
+  - docker
+  - mongodb
+cache:
+  directories:
+    - "$HOME/.cache"
+env:
+  global:
+    - secure: Te2Yd3gvCAcbCFwF+mgxbTfUoLlbDYCoR0X/J8b55McU3dYKaadIynpvcxDDfYIXe5jlLIDOr/J3UIuACz/XTWq+GQ+FKv8famCQpc0Ayl98EnSPzRUxsmG6Ko0BDy0ofzLcEpezDj06j6Bn4PxEWvb0fklKAHYsQiNbg/0+o3JBV9kdPHowJiWAvlJRrAzl5JJ/DDvVJaUoM4ZWdDcN9DiEWwxQ2PZYCRrHjU2LaR+YTIr5p0fLmAYj3T5fRfXi3lRCxPt/Yy96SfNGirMk6MKkHvBs4EZlavFjZ8voOoH8Xr33d2qQGN8vtd1PGfthT7bWLXvPilkffxT2PUL1lUbDCzPzUe+pJz3LTBFTi4L8yIbhSsT35XMe5wik5vMF60e2hC72n7+OjpeObxiC8kjkSBQHn3/OBhPI3lXZj3tOZTan5ELQAOWnv9uQnJDwtjKUBqVMv5yjhUP4Y2WGTJBVjhrtfjEENssd2WsXmvEG1APH5Ez0fAInFXcFMg+ApZnDLnTOeeYaAepOsNmP1WqqvsJZc745J4ccpbr9BKGJ2U0VAMc7rsT/gaZmLaPgkVf9G+1r32REIbI53fDizTCw0ITT3Kb0dWO9ljTtmLecJMyik6LEfjsZTMmh6btFFH0CABL1LsUQzAyw06ajKQjKgDFABokcoBrngK29r98=
+    - secure: HbdO2hI4IgHxZuaZ2geyGg9ak/gCfGqQ87E8LAiAdTputbxcpT+Cn+yCAab7mFFWb+ryrffFVAroDZPcJMC/5RWQ8XWN/uRYc708LA0ZuBm77oqhmmGNVv1jZriYKN29IzjPTgFwaKKd7hnI6VnFFrP2mgOOXUfE9Un9WhlJnbUr7atKSIhOwJL7qzn4GpUFQ+EIi739NtQA2+mpQdAIJxuC6PfISo+idjGJUiZY8Sa1wGT41J53VrZQDV+Wlm2F5aoDXwjduiptjFkamxDhcYDzH8GyLSsaao22SJYZGY8YpmQDUzo2ysD7LVWiYosUOVOjRClBLZF7Zo+ponyxpWqo9PMndfRjXKhk3220E5B7ZGMRWnjIaTc++Hm2WdPqI5S0raz51ZpTd/+TbPJ8HjCE+mGZwHk4xCByrZEjx/4Zeebm0bYfA5MsLmb+n60WOkBAjHqymV07XZ3wIE0fbE5vHut/B325r/sQloxnleh9u6sITkwAcO/QmxUwtoP//dMaNLkNgaZtFCphtmK6Z6ctNw2E/9uBf/PDxRv0SlUKxrbZ3aG2SD4N0DUOMgaWOdbfTnZxLjfMJtueMZh2nicHkpJXY3dZC1TU3ofoDE0+SsSmAYQZJSARiDytIw4C6j8bKaEramKdtGasdNP5tJ6BGsrKGRfG/AZIeIFGYyQ=
+    - secure: d73uP1onetjBpwC5x4xfKWFZtKl4PnNQRWhdTBBFLcmlDL3TZRTXrMsA3NK7Bth99SDqiVOqVj8hHnSAhtuJhxQxpItQBlIayq38AZkRNFXYRUVLRYOGyQnlevPfbYNRwbBF/9XE5yHIkc1vGWhWhO6McXJsZE5p2MUdCO5142EYCCBleVi9+jHH+aqBIHWhSh7et6aoW6qnqvLC7qX2CVSovkSpEBJk3ie3CZ2X65hwQ2PktnWild04+0+fvxVgbqKp51Tu++kosfiAqNtd6vIao/M0ylrZGJmdp7qyY+6ErURrOEtuDTcle8lM+Y8qByR0CXGxb5HKmodZZhLWPrUebJ4rRUj8pMOtcPrqBp9/L+qdfIrgjHxwRvM1h3XL/SUP3rBI0Sn/p80sr/gQb57FqzaNgPUoSwfda9d3mppzoLFamq8wR4pMXcy4xJDvHbTk1tjuCM82LyHLWbtLdCTkHI2DIoPsB1dZU9vOO9d6t/vBurNtoO7J7fpp0uVPhnXW4jh7Uiw4afpDgym5I+BzchNWS1KCE5OC3zX/oFMcyfACzIARKzlHoMuLG03OdcT/sSoGpQniSdUAvPxWQ13Ok04oAzAIA2L4tM5hbkyzvAHKhTktT+631NqfUAfPSTzEysSFkiUIEazhD25RXDyojFn0wAd8FNSNUc87mbU=
+addons:
+  hosts:
+    - mongo-server
+  sonarcloud:
+    organization: sunxuia
+    token:
+      secure: n9TIOAxZZ4BFdnjJnHhoW+UKaXUdB/6WzPflY7KysVbn5fournhdqRXLsjW/7QTxwa3zpwS63M1O/I8CCJH5vXIcLoqetVcVrtgpZNyYAE1JEfMZf/lEqDR8SUf7ZnIznYz3hazNP9uzlymp9VzOodEEAjaSPlT7X+hIeoj4UkyLpRUrAZjHpmHcVSj30q0hCOPwYNq0N68kNO3PaA8U
+        V/hAsdq6ST5SQvV0qtrUpKtWS/sspPrBXqQBk6eogDm1x9i6FXdXMwEtS7UOyBQg/zx1Lms495RuW7XFgQSKlc7yCqbZc1uT6sxUtyIElCuUOVKBSlYb5C2QTqH4TI1oks5/mzvxmJa8+gfM40sqGr1S2x8CcwCageysm+YFMk0aOtg+tgbEGjo6nylt3VTVyDc3lgjVNF0UcEwNl+ZgkrtzKsSPFnHKPwPMQSHQXXwMgRhARiD3Tlez6/t6AJr+L7riK6rwEmMsnNVPbFXnIbJXwC9GQqd276KmSf4CWq3FxjCEgidA8AzVZRt+GhO0h5adDeNE4Gbjvupst25UBGGeQGXSXY6TmfijjnrSxLk0e37TzCo40O7r2vUDyAcVmnCtHG8V7mhNfVBSEdhZT+gBzWGpRoh/3Km0ag4hGWySL/qgIKLczx+tcR0DWs
+        MGWkD90M8J1p9DBLsUPBHul2E=
+  apt:
+    packages:
+      - docker-ce
+before_script:
+  - sleep 15
+  - mongo mydb_test --eval 'db.createUser({user:"tstuser",pwd:"123456",roles:["readWrite"]});'
+script:
+  - chmod +x build.sh && ./build.sh
+  - rm -f ~/.docker/config.json
