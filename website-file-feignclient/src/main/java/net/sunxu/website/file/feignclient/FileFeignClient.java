@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
 @FeignClient(serviceId = "file-service")
-public interface FileService {
+public interface FileFeignClient {
 
     @RequestMapping(path = "/file",
             method = RequestMethod.POST,
