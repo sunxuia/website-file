@@ -1,4 +1,7 @@
-server.port: 8600
+server:
+  port: 8600
+  servlet:
+    session.persistent: false
 
 spring:
   application:

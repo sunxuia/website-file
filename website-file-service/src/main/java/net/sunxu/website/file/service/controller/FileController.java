@@ -98,6 +98,12 @@ public class FileController {
         }
     }
 
+    @AccessResource("download")
+    @GetMapping(value = "/{id:[0-9a-f]+}", produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
+    public void downloadFileWoFileName(@PathVariable("id") String id, HttpServletResponse response) throws IOException {
+        downloadFile(id, response);
+    }
+
     @AccessResource("info")
     @GetMapping("/{id:[0-9a-f]+}/info")
     public ResponseEntity<FileInfoDTO> getFileInfo(@PathVariable("id") String id) {
